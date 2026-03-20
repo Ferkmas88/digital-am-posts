@@ -1,0 +1,47 @@
+name: Daily Instagram Post
+
+on:
+  schedule:
+    - cron: '0 14 * * *'  # 10:00 AM EST (UTC-4) = 14:00 UTC
+  workflow_dispatch:       # permite correrlo manualmente
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish today's post
+        run: |
+          DAY=$(date +%u)  # 1=Mon, 2=Tue, 3=Wed, 4=Thu, 5=Fri, 6=Sat, 7=Sun
+
+          case $DAY in
+            5) # Viernes
+              IMAGE_URL="https://raw.githubusercontent.com/Ferkmas88/digital-am-posts/main/post1-viernes.png"
+              CAPTION="De WhatsApp a Negocio Digital 🚗\n\nAsí transformamos a un dealer de carros en Louisville:\n\n❌ Antes: Solo WhatsApp, sin inventario online, leads perdidos\n✅ Ahora: Web profesional, inventario en línea, citas automáticas, Google activo\n\n📩 Primera consulta GRATIS → DM\n\n#DigitalAM #Louisville #MarketingDigital #NegociosLatinos #CasoDeExito #WebDesign #Kentucky"
+              ;;
+            6) # Sábado
+              IMAGE_URL="https://raw.githubusercontent.com/Ferkmas88/digital-am-posts/main/post2-sabado.png"
+              CAPTION="¿Tu negocio comete estos 5 errores? 👇\n\n1️⃣ Sin sitio web propio\n2️⃣ Google Business sin verificar\n3️⃣ Cero reseñas online\n4️⃣ Sin sistema de citas o pedidos\n5️⃣ Sin contenido en redes\n\nEl 80% de pequeños negocios los tiene todos. ¿Cuántos tienes tú? Comenta abajo 👇\n\n#DigitalAM #Louisville #ErroresDigitales #NegociosLatinos #MarketingDigital #Kentucky"
+              ;;
+            7) # Domingo
+              IMAGE_URL="https://raw.githubusercontent.com/Ferkmas88/digital-am-posts/main/post3-domingo.png"
+              CAPTION="De vender solo en local a vender 24/7 online 💍\n\nV&M Luxury Jewelry en Louisville ahora tiene:\n\n✨ Colección Bridal — Anillos de compromiso\n✨ Gold Essentials — Uso diario en oro\n✨ Statement Gems — Piedras preciosas\n\n🌐 vmluxuryjewelry.com\n\n📩 ¿Tu negocio quiere vender 24/7? DM para auditoría GRATIS\n\n#DigitalAM #Louisville #LuxuryJewelry #NegociosLatinos #TiendaOnline #Kentucky"
+              ;;
+            1) # Lunes
+              IMAGE_URL="https://raw.githubusercontent.com/Ferkmas88/digital-am-posts/main/post4-lunes.png"
+              CAPTION="Tu negocio merece competir como empresa grande 💪\n\n✅ Sitios Web profesionales\n✅ Automatización con IA\n✅ Redes Sociales gestionadas\n✅ Tiendas Online\n✅ Bots y Chats WhatsApp\n✅ SEO Local en Louisville\n\nAl precio que un pequeño negocio puede pagar.\n\n📩 DM para auditoría GRATIS\n\n#DigitalAM #Louisville #MarketingDigital #NegociosLatinos #SitioWeb #SEO #Kentucky"
+              ;;
+            2) # Martes
+              IMAGE_URL="https://raw.githubusercontent.com/Ferkmas88/digital-am-posts/main/post5-martes.png"
+              CAPTION="Foto booth de lujo que se reserva solo online 📸\n\nFiesta Boom Studio Louisville — Bodas, Quinceañeras y Eventos Privados\n\n✨ Estilo Magazine — Tus invitados como portada\n💡 LED suave y elegante\n📲 Entrega digital inmediata con QR\n📅 Reservas online 24/7 — Sin llamadas, sin WhatsApp\n\n💒 Bodas | 👑 Quinceañeras | 🎂 Cumpleaños | 🥂 Privados\n\n🌐 fiesta-boom-louisville.vercel.app\n\n#DigitalAM #Louisville #FiestaBoom #PhotoBooth #Quinceañera #Bodas #Kentucky"
+              ;;
+            *) # Miércoles y Jueves — no publicar
+              echo "No post today (day $DAY)"
+              exit 0
+              ;;
+          esac
+
+          curl -s -X POST "${{ secrets.MAKE_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d "{\"image_url\":\"$IMAGE_URL\",\"caption\":\"$CAPTION\"}"
+
+          echo "Posted: $IMAGE_URL"
