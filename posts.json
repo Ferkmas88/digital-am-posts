@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "day": "Friday",
+      "day_num": 5,
+      "image": "post1-viernes.png",
+      "image_url": "https://raw.githubusercontent.com/Ferkmas88/digital-am-posts/main/post1-viernes.png",
+      "caption": "De WhatsApp a Negocio Digital 🚗\n\nAsí transformamos a un dealer de carros en Louisville:\n\n❌ Antes: Solo WhatsApp, sin inventario online, leads perdidos\n✅ Ahora: Web profesional, inventario en línea, citas automáticas, Google activo\n\n📩 Primera consulta GRATIS → DM\n\n#DigitalAM #Louisville #MarketingDigital #NegociosLatinos #CasoDeExito #WebDesign #Kentucky"
+    },
+    {
+      "day": "Saturday",
+      "day_num": 6,
+      "image": "post2-sabado.png",
+      "image_url": "https://raw.githubusercontent.com/Ferkmas88/digital-am-posts/main/post2-sabado.png",
+      "caption": "¿Tu negocio comete estos 5 errores? 👇\n\n1️⃣ Sin sitio web propio\n2️⃣ Google Business sin verificar\n3️⃣ Cero reseñas online\n4️⃣ Sin sistema de citas o pedidos\n5️⃣ Sin contenido en redes\n\nEl 80% de pequeños negocios los tiene todos. ¿Cuántos tienes tú? Comenta abajo 👇\n\n#DigitalAM #Louisville #ErroresDigitales #NegociosLatinos #MarketingDigital #Kentucky"
+    },
+    {
+      "day": "Sunday",
+      "day_num": 0,
+      "image": "post3-domingo.png",
+      "image_url": "https://raw.githubusercontent.com/Ferkmas88/digital-am-posts/main/post3-domingo.png",
+      "caption": "De vender solo en local a vender 24/7 online 💍\n\nV&M Luxury Jewelry en Louisville ahora tiene:\n\n✨ Colección Bridal — Anillos de compromiso\n✨ Gold Essentials — Uso diario en oro\n✨ Statement Gems — Piedras preciosas\n\n🌐 vmluxuryjewelry.com\n\n📩 ¿Tu negocio quiere vender 24/7? DM para auditoría GRATIS\n\n#DigitalAM #Louisville #LuxuryJewelry #NegociosLatinos #TiendaOnline #Kentucky"
+    },
+    {
+      "day": "Monday",
+      "day_num": 1,
+      "image": "post4-lunes.png",
+      "image_url": "https://raw.githubusercontent.com/Ferkmas88/digital-am-posts/main/post4-lunes.png",
+      "caption": "Tu negocio merece competir como empresa grande 💪\n\n✅ Sitios Web profesionales\n✅ Automatización con IA\n✅ Redes Sociales gestionadas\n✅ Tiendas Online\n✅ Bots y Chats WhatsApp\n✅ SEO Local en Louisville\n\nAl precio que un pequeño negocio puede pagar.\n\n📩 DM para auditoría GRATIS\n\n#DigitalAM #Louisville #MarketingDigital #NegociosLatinos #SitioWeb #SEO #Kentucky"
+    },
+    {
+      "day": "Tuesday",
+      "day_num": 2,
+      "image": "post5-martes.png",
+      "image_url": "https://raw.githubusercontent.com/Ferkmas88/digital-am-posts/main/post5-martes.png",
+      "caption": "Foto booth de lujo que se reserva solo online 📸\n\nFiesta Boom Studio Louisville — Bodas, Quinceañeras y Eventos Privados\n\n✨ Estilo Magazine — Tus invitados como portada\n💡 LED suave y elegante\n📲 Entrega digital inmediata con QR\n📅 Reservas online 24/7 — Sin llamadas, sin WhatsApp\n\n💒 Bodas | 👑 Quinceañeras | 🎂 Cumpleaños | 🥂 Privados\n\n🌐 fiesta-boom-louisville.vercel.app\n\n#DigitalAM #Louisville #FiestaBoom #PhotoBooth #Quinceañera #Bodas #Kentucky"
+    }
+  ]
+}
